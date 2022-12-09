@@ -11,13 +11,10 @@ while True:
     new_string = user_string + '\n'
     our_list.append(new_string)
 
-with open("file_for_first_task.txt", "w") as file_object:
+with open("file_for_first_task.txt", 'w', encoding="utf8") as file_object:
     file_object.writelines(our_list)
 
 # Для просмотра того, что записалось
-with open("file_for_first_task.txt") as file_object:
+with open("file_for_first_task.txt", 'r', encoding="utf8") as file_object:
     content = file_object.readlines()
     print("Читаем из файла: ", content)
-
-
-
